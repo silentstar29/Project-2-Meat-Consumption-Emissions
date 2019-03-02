@@ -1,5 +1,7 @@
-d3.csv("data/final_data/beef_dashboard_data.csv", function(row) {
-  return {
+d3.csv("data/final_data/beef_dashboard_data.csv", function(error, beefData) {
+  if (error) return console.warn(error);
+  console.log(beefData);
+  beefData.forEach(function(row) {
     continent: row.Continent,
     country: row.Country,
     region: row.Region,
@@ -9,31 +11,30 @@ d3.csv("data/final_data/beef_dashboard_data.csv", function(row) {
     emissionsPerCapitaKG: +row["Emissions Per Capita"],
     beefPerCapitaKG: +row["Beef Consumption Per Capita"],
     beefTotalKG: +row["Total Beef Consumption"]
-  };
-}).then(function(data) {
-  var data_2012 = data.filter(function(d) { return d.year == 2012; });
-  var data_2011 = data.filter(function(d) { return d.year == 2011; });
-  var data_2010 = data.filter(function(d) { return d.year == 2010; });
-  var data_2009 = data.filter(function(d) { return d.year == 2009; });
-  var data_2008 = data.filter(function(d) { return d.year == 2008; });
-  var data_2007 = data.filter(function(d) { return d.year == 2007; });
-  var data_2006 = data.filter(function(d) { return d.year == 2006; });
-  var data_2005 = data.filter(function(d) { return d.year == 2005; });
-  var data_2004 = data.filter(function(d) { return d.year == 2004; });
-  var data_2003 = data.filter(function(d) { return d.year == 2003; });
-  var data_2002 = data.filter(function(d) { return d.year == 2002; });
-  var data_2001 = data.filter(function(d) { return d.year == 2001; });
-  var data_2000 = data.filter(function(d) { return d.year == 2000; });
-  var data_1999 = data.filter(function(d) { return d.year == 1999; });
-  var data_1998 = data.filter(function(d) { return d.year == 1998; });
-  var data_1997 = data.filter(function(d) { return d.year == 1997; });
-  var data_1996 = data.filter(function(d) { return d.year == 1996; });
-  var data_1995 = data.filter(function(d) { return d.year == 1995; });
-  var data_1994 = data.filter(function(d) { return d.year == 1994; });
-  var data_1993 = data.filter(function(d) { return d.year == 1993; });
-  var data_1992 = data.filter(function(d) { return d.year == 1992; });
-  var data_1991 = data.filter(function(d) { return d.year == 1991; });
-  var data_1990 = data.filter(function(d) { return d.year == 1990; });
+  });
+    var data_2012 = beefData.filter(function(d) { return d.year == 2012; });
+    var data_2011 = beefData.filter(function(d) { return d.year == 2011; });
+    var data_2010 = beefData.filter(function(d) { return d.year == 2010; });
+    var data_2009 = beefData.filter(function(d) { return d.year == 2009; });
+    var data_2008 = beefData.filter(function(d) { return d.year == 2008; });
+    var data_2007 = beefData.filter(function(d) { return d.year == 2007; });
+    var data_2006 = beefData.filter(function(d) { return d.year == 2006; });
+    var data_2005 = beefData.filter(function(d) { return d.year == 2005; });
+    var data_2004 = beefData.filter(function(d) { return d.year == 2004; });
+    var data_2003 = beefData.filter(function(d) { return d.year == 2003; });
+    var data_2002 = beefData.filter(function(d) { return d.year == 2002; });
+    var data_2001 = beefData.filter(function(d) { return d.year == 2001; });
+    var data_2000 = beefData.filter(function(d) { return d.year == 2000; });
+    var data_1999 = beefData.filter(function(d) { return d.year == 1999; });
+    var data_1998 = beefData.filter(function(d) { return d.year == 1998; });
+    var data_1997 = beefData.filter(function(d) { return d.year == 1997; });
+    var data_1996 = beefData.filter(function(d) { return d.year == 1996; });
+    var data_1995 = beefData.filter(function(d) { return d.year == 1995; });
+    var data_1994 = beefData.filter(function(d) { return d.year == 1994; });
+    var data_1993 = beefData.filter(function(d) { return d.year == 1993; });
+    var data_1992 = beefData.filter(function(d) { return d.year == 1992; });
+    var data_1991 = beefData.filter(function(d) { return d.year == 1991; });
+    var data_1990 = beefData.filter(function(d) { return d.year == 1990; });
 });
 
 var data2012 = {
