@@ -1,4 +1,3 @@
-# Import Dependencies
 import os
 
 import pandas as pd
@@ -12,17 +11,16 @@ from sqlalchemy import create_engine
 from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
-from flask import Flask, jsonify, render_template
-
 app = Flask(__name__)
 
-@app.route("/methane_emission")
+@app.route("/")
 def index():
-    return render_template('index.html')
+    """Return the homepage."""
+    return render_template("index.html")
 
-@app.route("/meat_consumption")
+@app.route("/meat")
 def index2():
-    return render_template('index2.html')
-    
+    return render_template("index2.html")
+
 if __name__ == "__main__":
     app.run()
