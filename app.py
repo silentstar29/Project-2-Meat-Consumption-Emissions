@@ -18,7 +18,7 @@ def index():
     """Return the homepage."""
     return render_template("index.html")
 
-@app.route("/meat")
+@app.route("/")
 def index2():
     return render_template("index2.html")
 
