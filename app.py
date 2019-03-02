@@ -23,16 +23,6 @@ def index():
 @app.route("/meat_consumption")
 def index2():
     return render_template('index2.html')
-
-@app.route("/meat_data")
-def test():
-    data = ("beef_dashboard_data.csv")
-    return jsonify(data)
-
-@app.route("/methane_data")
-def test2():
-    data2 = ("emissions_dashboard_data_final.csv")
-    return jsonify(data2)
     
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
