@@ -18,9 +18,9 @@ def index():
     """Return the homepage."""
     return render_template("index.html")
 
-@app.route("/")
-def index2():
+@app.route("/meat_consumption")
+def test():
     return render_template("index2.html")
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=8004)

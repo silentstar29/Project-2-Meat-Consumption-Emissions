@@ -1,5 +1,5 @@
 d3.queue()
-  .defer(d3.csv, "./data/final_data/beef_dashboard_data.csv", function(row) {
+  .defer(d3.csv, "static/beef_dashboard_data.csv", function(row) {
     return {
       continent: row.Continent,
       country: row.Country,

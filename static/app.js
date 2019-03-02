@@ -2,7 +2,7 @@
 d3.queue()
 //makes 2 requests for topojson file and emissions_data.csv
   .defer(d3.json, "//unpkg.com/world-atlas@1.1.4/world/50m.json")
-  .defer(d3.csv, "./data/emissions_data1.csv", function(row) {
+  .defer(d3.csv, "static/emissions_dashboard_data_final.csv", function(row) {
     return {
       continent: row.Continent,
       country: row.Country,
@@ -15,7 +15,7 @@ d3.queue()
   })
 // await to make sure fetch of all data is complete
   .await(function(error, mapData, data) {
-    if (error) throw error;
+  //  if (error) throw error;
 //set variable for max and min year values
     var extremeYears = d3.extent(data, d => d.year);
     var currentYear = extremeYears[0];
