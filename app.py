@@ -33,6 +33,6 @@ def test():
 def test2():
     data2 = ("emissions_dashboard_data_final.csv")
     return jsonify(data2)
-
+    
 if __name__ == "__main__":
     app.run(debug=True)
