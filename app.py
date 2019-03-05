@@ -20,7 +20,7 @@ def index():
 
 @app.route("/meat_consumption")
 def test():
-    return render_template("index2.html")
+    return render_template("index2v2.html")
 
 if __name__ == "__main__":
-    app.run(port=8006)
+    app.run(port=8011)
