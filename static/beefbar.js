@@ -73,8 +73,8 @@ function createBar(width, height) {
         .call(yAxis);
   
     var axisLabel = dataType === "emissions" ?
-      "Consumption, thousand metric tons" :
-      "Consumption, metric tons per capita";
+      "Consumption, thousand metric kgs" :
+      "Consumption, metric kg per capita";
   
     var barTitle = country ?
       "Beef Consumption, " + country :
