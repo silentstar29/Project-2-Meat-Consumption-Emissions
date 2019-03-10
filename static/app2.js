@@ -75,7 +75,7 @@ d3.queue()
       var isArc = tgt.classed("arc");
       var dataType = d3.select("input:checked")
                        .property("value");
-      var units = dataType === "emissions" ? "thousand metric tons" : "metric tons per capita";
+      var units = dataType === "beef consumption" ? "thousand metric kgs" : "kg per capita";
       var data;
       var percentage = "";
       if (isCountry) data = tgt.data()[0].properties;
